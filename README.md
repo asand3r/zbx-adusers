@@ -33,5 +33,5 @@ It supports three arguments:
  - HostName  
  
 The first one accepts "lld" for do LLD and "sender" to prepare data in format suitable for zabbix_sender.exe utility. It's mandatory;  
-The second one - filter in ldapFilter format. It's using to find only needed user object in LDAP. Read this article to understand how it works: https://docs.microsoft.com/en-us/windows/desktop/adsi/search-filter-syntax
+The second one - filter in ldapFilter format. It's using to find only needed user object in LDAP. Read this article to understand how it works: https://docs.microsoft.com/en-us/windows/desktop/adsi/search-filter-syntax  
 The third - name of hosts in Zabbix where you linked the template. By default it's $env:COMPUTERNAME.  
