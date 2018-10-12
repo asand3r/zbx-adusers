@@ -5,6 +5,7 @@ Low Level Discovery Active Directory Users and send password expired date to Zab
 Kind of 'just for fun' solution. But, someone can find it helpful.
 
 ![alt](https://pp.userapi.com/c850532/v850532773/204a2/tXYicR_w_Ho.jpg)
+![alt](https://pp.userapi.com/c850532/v850532773/204ee/bXIcI26vGwk.jpg)
 
 # Requirements
  - PowerShell v3.0+
