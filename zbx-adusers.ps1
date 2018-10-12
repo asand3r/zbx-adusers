@@ -29,7 +29,7 @@
 Param (
     [ValidateSet("lld","sender")][Parameter(Position=0, Mandatory=$True)][string]$action,
     [Parameter(Position=1, Mandatory=$False)][string]$LdapFilter = "(&(objectClass=User)(objectClass=Person))",
-    [Parameter(Position=2, Mandatory=$False)][string]$HostName
+    [Parameter(Position=2, Mandatory=$False)][string]$HostName = $env:COMPUTERNAME
 )
 
 # Script version
@@ -61,9 +61,6 @@ switch ($action) {
             [int]$days = ($_.PasswordLastSet - $(Get-Date).AddDays(-90)).Days
             if ($days -lt 0) {
                 $days = 0
-            }
-            if ($HostName -eq "") {
-                $HostName = $env:COMPUTERNAME
             }
             $ItemName = "user.expired.days[$($_.SamAccountName)]"
             Write-Host $([string]::Format('"{0}" "{1}" {2}', $HostName, $ItemName, $days))
