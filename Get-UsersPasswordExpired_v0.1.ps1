@@ -21,7 +21,7 @@ Param (
 )
 
 $users = Get-ADUser -LDAPFilter $ldapFilter -Properties PasswordLastSet
-$hostName = "SHV-VDC01"
+$hostName = "ZABBIX_HOST_NAME"
 
 $users | ForEach-Object {
     [int]$days = ($_.PasswordLastSet - $(Get-Date).AddDays(-90)).Days
