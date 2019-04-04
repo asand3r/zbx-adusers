@@ -12,7 +12,7 @@ Low Level Discovery Active Directory Users and send password expired date to Zab
 There is one PowerShell script:
  - zbx-adusers.ps1  
 
-Just create "scripts" folder near your Zabbix agent binaris and copy settings from userparameter.conf file to your zabbix_agentd.conf. After this restart the agent.  
+Just create "scripts" folder near your Zabbix agent binaris and copy settings from userparameter.conf file to your zabbix_agentd.conf and restart the the agent service.  
 ![alt](https://pp.userapi.com/c844521/v844521604/112536/cREnK76m7w0.jpg)  
 You can check the script by zabbix_get utility:  
 ```bash
